@@ -1,0 +1,175 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face{
+    font-family: "Lato-Bold";
+    src: url("../fonts/Lato2OFL/Lato-Bold.ttf") format("truetype");
+}
+@font-face{
+    font-family: "Lato-Light";
+    src: url("../fonts/Lato2OFL/Lato-Light.ttf") format("truetype");
+}
+@font-face{
+    font-family: "Lato-Regular";
+    src: url("../fonts/Lato2OFL/Lato-Regular.ttf") format("truetype");
+}
+
+
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+#header {
+    /* background-size:auto; */
+    background-size: cover;    
+    background-image: linear-gradient(rgba(103, 58, 183, 0.75), rgba(182, 67, 202, 0.45)), url(../img/bg-header-1.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    padding-top: 60px;
+}
+
+.header__bg{
+    height: 750px;
+}
+
+.header__menu{
+    position: absolute;
+    top: 0px;    
+    right: 0px;
+}
+
+.header__li{
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0px 15px;
+    font-size: 18px;
+    color: #ffff;
+    font-family: "Lato-Light";
+}
+.header__li:hover{
+    font-family: "Lato-Regular";
+}
+
+.header__main-content{
+    padding-top: 190px;
+    font-size: 65px;
+    color: #ffff;
+    font-family: "Lato-Regular";
+    text-align: center;
+}
+
+.header__little-content{
+    font-family: "Lato-Light";
+    color: #ffff;
+    font-size: 33px;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.header__button{
+    display: block;
+    width: 195px;
+    padding: 15px 0px;
+    border: 1px solid #ffff;
+    border-radius: 50px;
+    color: #ffff;
+    text-decoration: none;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 75px;    
+}
+
+/* WE DO */
+
+#wedo{
+    background-color: #ffff;
+    padding: 130px 0px;    
+}
+
+.wedo__main-content{    
+    text-transform: uppercase;
+    font-size: 128px;
+    font-family: "Lato-Bold";
+    color: #e1e1e1;    
+    width: 210px;
+    line-height: 150px;
+    float: left;
+    padding-right: 20%;
+    padding-bottom: 280px;
+}
+.wedo__col {
+    float: left;
+    width: 50%;
+}
+.wedo__menu {
+    padding-left: 20px;
+    padding-bottom: 50px;
+}
+.wedo__logo{
+    float: left;
+    width: 67px;
+    margin-left: 45px;
+}
+.wedo__content, .wedo__para{
+    margin-left: 150px;
+}
+
+.wedo__para{
+    padding-top: 45px;
+}
