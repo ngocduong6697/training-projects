@@ -1,0 +1,1344 @@
+/* RESET CSS BEGIN */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.no-outline:focus {
+	outline: none;
+}
+input {
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+	border-bottom-color: transparent ;
+	width: 150px;
+	height: 19px;
+	opacity: 0.7;
+	color: #b2b2b2;
+	font-family: "Nunito-Light";
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: -0.35px;
+	}
+* {
+	box-sizing: border-box; 
+}
+/*RESET CSS END*/
+
+@font-face {
+    font-family: 'Nunito-Light';
+    src: local('HelveticaNeue-Light.otf'), url('nunito-fonts/Nunito-Light.ttf') format('opentype');
+}
+@font-face {
+    font-family: 'Nunito-Bold';
+    src: local('HelveticaNeue-Bold.otf'), url('nunito-fonts/Nunito-Bold.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Nunito-ExtraBold';
+    src: local('HelveticaNeue-Thin.otf'), url('nunito-fonts/Nunito-ExtraBold.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Nunito-Black';
+    src: local('HelveticaNeue-Black.otf'), url('nunito-fonts/Nunito-Black.ttf') format('opentype');
+}
+
+.padding-right{
+    &-10{
+        padding-right: 10px;
+    }
+    &-20{
+        padding-right: 20px;
+    }
+    &-30{
+        padding-right: 30px;
+    }    
+}
+.padding-left{
+    &-10{
+        padding-left: 10px;
+    }
+    &-20{
+        padding-left: 20px;
+    }
+    &-30{
+        padding-left: 30px;
+    }    
+}
+.margin-right{
+    &-8{
+        margin-right: 8px;
+    }
+    &-10{
+        margin-right: 10px;
+    }
+    &-15{
+        margin-right: 15px;
+    }    
+}
+.margin-left{
+    &-15{
+        margin-left: 15px;
+    }
+}
+.margin-top{
+    &-15{
+        margin-top: 15px;
+    }
+    &-20{
+        margin-top: 20px;
+    }
+}
+.margin-bottom{    
+    &-20{
+        margin-bottom: 20px;
+    }
+}
+
+// HEADER 
+
+.container{
+    max-width: 1024px;
+	padding: 10px 0px;	
+	margin: auto;
+}
+.header__menu{
+    display: flex;
+    justify-content: flex-end;
+
+    &-list{
+        margin: 10px 0px;
+
+        &-content{
+            display: inline-block;	
+            letter-spacing: -0.3px;	
+            padding-left: 10px;
+            padding-top: 10px;
+
+            & a{
+                color: #000000;
+                font-family: 'Nunito-Light';
+                font-size: 12px;
+                font-weight: 600;
+                text-decoration: none;
+            }            
+        }
+        &-hotline{
+            & a {
+                font-family: 'Nunito-ExtraBold';
+            }
+        }
+    }
+    &-nation{
+        margin: 15px 30px;
+    }
+}
+
+.line{
+    width: 100%;
+	border-bottom: 1px solid pink;
+}
+// UNDER HEADER
+
+.udheader{
+    display: flex;
+	justify-content: space-between;
+    align-items: center;
+
+    &__images{
+    display: flex;
+    justify-content: space-between;
+
+        & img{
+            width: 45px;
+	        height: 48px;	
+        }
+
+    }
+
+    &__right-list{
+        display: inline-block;
+        color: #000000;	
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: -0.35px;
+        font-family: 'Nunito-Light';
+    }
+}
+
+// MIDDLE
+
+@mixin bothBeforeAndAfter {
+    content: "";
+    position: absolute;
+    z-index: 998;
+    opacity: 0.9;
+}
+
+@mixin middleContentBefore {
+    @include bothBeforeAndAfter();
+    left: 0px;
+    bottom: 3px;	    	
+    border-left: 1024px solid #86dbd5;;
+    border-top: 231px solid transparent;	
+}
+@mixin middleContentAfter {  
+    @include bothBeforeAndAfter();  
+    right: 0px;
+    top: 0px;
+    transform: rotate(-180deg);	    
+    border-left: 667px solid #f34e49;;
+    border-top: 48px solid transparent;
+}
+
+@mixin middleContent {
+    position: absolute;
+    z-index: 999;
+    top: 232px;
+    left: 76px;	
+}
+
+@mixin middleButton {
+    width: 196px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #f34e49;
+    color: #ffffff;
+    font-family: 'Nunito-Bold';
+    font-size: 24px;
+    font-weight: 600;
+    padding: 15px 0px 0px 40px;
+    margin: 0px 0px 25px 0px;
+}
+
+@mixin middleGomarket {
+    width: 484px;
+    height: 98px;
+    color: #ffffff;
+    font-family: 'Nunito-Black';
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: -1.2px;
+    line-height: 55px;
+    text-transform: uppercase;
+}
+
+@mixin middlePara {
+    color: #ffffff;
+    font-family: 'Nunito-Light';
+    font-size: 25px;
+    font-weight: 400;
+    width: 350px;
+    letter-spacing: -0.62px;
+    line-height: 31px;
+}
+
+.middle{
+    position: relative;	
+	width: 1024px;
+    margin: auto;
+
+    & img{
+        width: 1024px;
+	    height: 510px;
+    }
+
+    &::before{
+        @include middleContentBefore();
+    }
+
+    &::after{    
+        @include middleContentAfter();    
+    }
+
+    &__main{
+        position: relative;
+
+        &-content{
+            @include middleContent();
+
+            &-button{
+                @include middleButton();
+            }
+
+            &-gomarket{
+                @include middleGomarket()
+            }
+
+            &-para{
+                @include middlePara();
+            }
+        }
+    }
+}
+
+// MIDDLE ITEM
+
+
+@mixin bothElementItems {
+    position: relative;
+    display: block;
+    width: 245px;
+    overflow: hidden;
+}
+
+@mixin elementItemsFirst {
+	@include bothElementItems();
+    height: 310px;		    
+}
+
+@mixin elementItemsSecond {
+    @include bothElementItems();
+    height: 345px;    
+}
+
+@mixin widthHeightImageOne{
+    width: 245px;
+    height: 245px;
+}
+@mixin widthHeightImageTwo{
+    width: 751px;
+    height: 345px;
+}
+@mixin widthHeightImageThree{
+    width: 410px;
+    height: 345px;
+}
+
+@mixin bothAfterAndBefore {
+    content: "";
+    position: absolute;
+    z-index: 998;
+    opacity: 0.9;
+}
+
+@mixin bothAfter{
+    left: 0px;
+    border-left: 400px solid #86dbd5;
+    border-top: 61px solid transparent;
+}
+
+@mixin bothBefore {
+    content: "";
+	position: absolute;
+	z-index: 998;
+	right: 0px;
+	top: 0px;
+	transform: rotate(-180deg);	
+	opacity: 0.9;
+	border-left: 184px solid #f34e49;;
+	border-top: 41px solid transparent;
+}
+
+@mixin oneAndThreeAfter {
+    @include bothAfterAndBefore();
+	right: 0px;
+	top: 0px;
+	transform: rotate(-180deg);		
+	border-left: 184px solid #f34e49;;
+	border-top: 41px solid transparent;
+}
+
+@mixin sixAfter {
+    @include bothAfterAndBefore();
+	left: 0px;
+	bottom: 0px;		
+	border-left: 1024px solid #86dbd5;;
+	border-top: 126px solid transparent;
+}
+
+@mixin sevenAfter {
+    @include bothAfterAndBefore();
+	left: 0px;
+	top: 0px;		
+	transform: rotate(-180deg);
+	border-right: 545px solid #f34e49;;
+	border-top: 137px solid transparent;
+}
+
+@mixin nineAfter {
+    @include bothAfterAndBefore();
+    @include bothAfter();
+    bottom: 165px;    
+}
+
+@mixin eightAndTenAfter {
+    @include bothAfterAndBefore();
+	@include bothAfter();
+	bottom: 100px;	
+}
+
+@mixin oneTwoThreeFourAfter {
+    @include bothAfterAndBefore();
+	@include bothAfter();
+	bottom: 65px;	
+}
+
+@mixin eightBefore {
+    @include bothBefore();
+}
+@mixin tenBefore {
+    @include bothBefore();
+}
+
+@mixin nineHover {
+    position: relative;
+	z-index: 1000;	
+	display: block;
+	height: 410px;
+	z-index: 1000;
+}
+
+@mixin bothLogo {
+    position: absolute;
+	z-index: 1000;
+	left: 10px;
+}
+
+@mixin oneTwoThreeFourLogo {
+    @include bothLogo();
+	bottom: 90px;
+}
+
+@mixin eightAndTenLogo {
+    @include bothLogo();
+	bottom: 125px;
+}
+
+@mixin nineLogo{
+    @include bothLogo();
+	bottom: 190px;
+}
+
+
+@mixin bothTitleAndPrice {
+    position: absolute;
+	left: 50%;
+    color: #000000;
+    letter-spacing: -0.35px;
+}
+
+@mixin oneTwoThreeFourPrice {
+    @include bothTitleAndPrice();
+	margin-left: -40px;
+	bottom: 0px;	
+	font-family: "Nunito-Bold";
+	font-size: 18px;
+	font-weight: 700;
+	
+}
+
+@mixin oneTwoThreeFourTitle {
+    @include bothTitleAndPrice();
+	bottom: 30px;
+	margin-left: -50px;
+	font-family: "Nunito-Light";
+	font-size: 14px;
+	font-weight: 400;	
+}
+
+@mixin bothNewSaleAndMade {
+    position: absolute;
+	z-index: 999;
+	font-family: "Nunito-Light";
+    font-size: 14px;
+    letter-spacing: -0.35px;
+}
+
+@mixin oneTenThreeEightNewAndSale {
+    @include bothNewSaleAndMade();
+	right: 10px;
+	top: 10px;	
+	color: #ffffff;
+	font-weight: 700;	
+	text-transform: uppercase;
+}
+
+@mixin oneTwoThreeFourMade {
+    @include bothNewSaleAndMade();
+	bottom: 70px;
+	left: 10px;
+	color: #000000;
+	font-weight: 300;
+	line-height: 18px;
+}
+
+@mixin eightAndTenPrice {
+    position: absolute;
+	left: 50%;
+	margin-left: -40px;
+	bottom: 40px;	
+	color: #000000;
+	font-family: "Nunito-Bold";
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: -0.45px;
+}
+
+@mixin eightAndTenTitle {
+    position: absolute;
+	bottom: 70px;
+	left: 50%;
+	margin-left: -50px;
+	color: #000000;
+	font-family: "Nunito-Light";
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: -0.35px;
+}
+
+@mixin eightAndTenMade {
+    @include bothNewSaleAndMade();
+	bottom: 105px;
+	left: 10px;	
+	color: #000000;		
+	font-weight: 300;	
+	line-height: 18px;
+}
+
+@mixin fiveTitle{
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    margin-left: -60px;	
+    width: 119px;
+    height: 27px;
+    color: #000000;
+    font-family: "Nunito-ExtraBold";
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+@mixin fivePara {
+    position: absolute;
+    left: 50%;
+    top: 105px;
+    margin-left: -110px;
+    width: 221px;
+    height: 65px;
+    color: #000000;
+    font-family: "Nunito-Light";
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.35px;
+    line-height: 17px;
+    text-align: center;
+}
+
+@mixin fiveInPut {
+    position: absolute;
+    left: 50%;
+    top: 205px;
+    margin-left: -105px;
+    text-align: center;
+    text-indent: 10px 20px;
+    width: 215px;
+    height: 41px;
+    line-height: 41px;
+    border: 1px solid #000000;
+    background-color: transparent;
+    outline: none;
+}
+
+@mixin fiveSubcribe{
+    position: absolute;
+    left: 50%;
+    top: 260px;
+    width: 178px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #f34e49;
+    margin-left: -85px;
+    cursor: pointer;
+}
+
+@mixin fiveSubcribePara {
+    position: absolute;	
+	margin: 13px 60px;
+	width: 60px;
+	height: 22px;
+	color: #ffffff;
+	font-family: "Nunito-Light";
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: -0.4px;
+}
+
+@mixin sixButton {
+    position: absolute;
+    z-index: 999;
+    left: 15px;
+    border-radius: 20px;
+    background-color: #f34e49;
+    bottom: 90px;
+    cursor: pointer;
+}
+
+@mixin sixButtonShop {
+    z-index: 999;
+    margin: 10px 30px;
+    color: #ffffff;
+    font-family: "Nunito-Light";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.4px;
+}
+
+@mixin sixTitle {
+    position: absolute;
+    z-index: 999;
+    bottom: 40px;
+    left: 20px;
+    width: 328px;
+    height: 33px;
+    color: #000000;
+    font-family: "Nunito-ExtraBold";
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
+}
+
+@mixin sixPara {
+    position: absolute;
+    z-index: 999;
+    bottom: 15px;
+    left: 20px;
+    width: 279px;
+    height: 33px;
+    color: #000000;
+    font-family: "Nunito-Light";
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.35px;
+    line-height: 17px;
+}
+
+@mixin sevenTitle {
+    position: absolute;
+    z-index: 1000;
+    top: 20px;
+    left: 30px;
+    width: 250px;
+    height: 33px;
+    color: #ffffff;
+    font-family: "Nunito-ExtraBold";
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+}
+
+
+@mixin sevenPara {
+    position: absolute;
+    z-index: 1000;
+    top: 50px;
+    left: 30px;
+    width: 250px;
+    height: 33px;
+    color: #ffffff;
+    font-family: "Nunito-Light";
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.35px;
+    line-height: 17px;
+}
+
+@mixin sevenButton {
+    position: absolute;
+    z-index: 1000;
+    top: 100px;
+    left: 30px;
+    width: 130px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #86dbd5;
+}
+
+@mixin sevenButtonShop {
+    margin: 10px 30px;
+    width: 71px;
+    height: 22px;
+    color: #ffffff;
+    font-family: "Nunito-Light";
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+}
+
+
+@mixin nineTitle {
+    position: absolute;
+    bottom: 135px;
+    left: 50%;
+    margin-left: -85px;		
+    color: #000000;
+    font-family: "Nunito-Light";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.35px;
+}
+
+@mixin ninePrice {
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+    bottom: 105px;	
+    color: #000000;
+    font-family: "Nunito-Bold";
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.45px;
+}
+
+@mixin nineMade {
+    position: absolute;
+    z-index: 999;
+    bottom: 170px;
+    left: 10px;
+    color: #000000;
+    font-family: "Nunito-Light";
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.35px;
+    line-height: 18px;
+}
+
+@mixin nineButton {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    margin-left: -60px;
+    width: 114px;
+    height: 35px;
+    border-radius: 18px;
+    background-color: #f34e49;
+    cursor: pointer;
+}
+
+@mixin ninePara {
+    margin: 12px 24px;
+    width: 70px;
+    height: 19px;
+    color: #ffffff;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.35px;
+}
+
+@mixin nineIcon {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -40px;
+    border-radius: 18px;	
+    cursor: pointer;
+}
+
+
+@mixin elevenAfter{
+    content: "";
+    position: absolute;
+    z-index: 998;
+    left: 0px;
+    bottom: 0px;        	
+    opacity: 0.85;	
+    border-left: 356px solid #86dbd5;;
+    border-top: 146px solid transparent;	        
+}
+
+@mixin elevenButton {
+    position: absolute;
+    z-index: 999;
+    left: -85px;
+    bottom: 85px;
+    border-radius: 20px;
+    background-color: #f34e49;
+    cursor: pointer;
+    width: 130px;
+    height: 40px;
+}
+
+@mixin elevenButtonPara {
+    z-index: 999;
+    margin: 10px 30px;
+    color: #ffffff;
+    font-family: "Nunito-Light";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.4px;
+}
+
+@mixin elevenTitle {
+    position: absolute;
+    z-index: 999;
+    bottom: 40px;
+    left: -85px;
+    width: 328px;
+    height: 33px;
+    color: #000000;
+    font-family: "Nunito-ExtraBold";
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    text-transform: uppercase;  
+}
+
+@mixin elevenPara {
+    position: absolute;
+    z-index: 999;
+    bottom: 15px;
+    left: -85px;
+    width: 279px;
+    height: 33px;
+    color: #000000;
+    font-family: "Nunito-Light";
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.35px;
+    line-height: 17px;
+}
+
+.middle__item{
+	position: relative;
+	max-width:1024px;	
+	margin: auto;	
+	padding: 30px 0px 60px 0px;
+	display: flex;			
+	flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    
+    &-bg{
+        position: absolute;
+        top: 274px;
+        left: 0px;
+        width: 1024px;
+        height: 550px;
+        background-color: #86dbd5;
+    }
+
+   &-one{
+    @include elementItemsFirst();
+    
+        &-image img{
+            @include widthHeightImageOne();
+        }
+        &::after{
+            @include oneAndThreeAfter();
+        }
+        &::before{
+            @include oneTwoThreeFourAfter();
+        }
+        &-logo{
+            @include oneTwoThreeFourLogo();
+        }
+        &-price{
+            @include oneTwoThreeFourPrice();
+        }
+        &-title{
+            @include oneTwoThreeFourTitle();
+        }
+        &-new{
+            @include oneTenThreeEightNewAndSale();
+        }
+        &-made{
+            @include oneTwoThreeFourMade();
+        }
+   }
+
+   &-two{
+    @include elementItemsFirst();
+    
+        &-image img{
+            @include widthHeightImageOne();
+        }
+        &::before{
+            @include oneTwoThreeFourAfter();
+        }
+        &-logo{
+            @include oneTwoThreeFourLogo();
+        }        
+        &-price{
+            @include oneTwoThreeFourPrice();
+        }
+
+        &-title{
+            @include oneTwoThreeFourTitle();
+        }
+
+        &-made{
+            @include oneTwoThreeFourMade();
+        }
+   }
+   &-three{
+            @include elementItemsFirst();
+
+            &-image img{
+                @include widthHeightImageOne();
+            }
+            &::after{
+                @include oneAndThreeAfter();
+            }
+            &::before{
+                @include oneTwoThreeFourAfter();
+            }
+
+            &-logo{
+                @include oneTwoThreeFourLogo();
+            }
+
+            &-price{
+                @include oneTwoThreeFourPrice();
+            }
+
+            &-title{
+                @include oneTwoThreeFourTitle();
+            }
+
+            &-sale{
+                @include oneTenThreeEightNewAndSale();
+            }
+
+            &-made{
+                @include oneTwoThreeFourMade();
+            }
+        
+   }
+
+   &-four{
+    @include elementItemsFirst();
+
+        &-image img{
+            @include widthHeightImageOne();
+        }
+        &::before{
+            @include oneTwoThreeFourAfter();
+        }
+        &-logo{
+            @include oneTwoThreeFourLogo();
+        }
+        &-price{
+            @include oneTwoThreeFourPrice()
+        }
+        &-title{
+            @include oneTwoThreeFourTitle();
+        }
+        &-made{
+            @include oneTwoThreeFourMade();
+        }
+   }
+   &-five{
+    @include elementItemsSecond();
+        &-image img{
+            @include widthHeightImageOne();
+        }
+        &-title{
+            @include fiveTitle();
+        }
+
+        &-para{
+            @include fivePara();
+        }
+
+        &-input{
+            @include fiveInPut();
+        }
+        &-subcribe{
+            @include fiveSubcribe();
+            &-para{
+                @include fiveSubcribePara();
+            }
+        }
+   }
+
+   &-six{
+    @include widthHeightImageTwo();
+    position: relative;
+	display: block;	
+    overflow: hidden;
+        &-image img{
+            @include widthHeightImageTwo();
+        }
+        &::after{
+            @include sixAfter();
+        }
+        &-button{
+            @include sixButton();
+            &-shop{
+                @include sixButtonShop();
+            }            
+        }
+        &-title{
+            @include sixTitle();
+        }
+        &-para{
+            @include sixPara();
+        }
+   }
+
+   &-seven{
+    @include widthHeightImageTwo();
+    position: relative;
+	display: block;
+	z-index: 999;
+	
+        &-image img{
+            @include widthHeightImageTwo();
+        }
+        &::after{
+            @include sevenAfter();
+        }
+        &-title{
+            @include sevenTitle();
+        }
+        &-para{
+            @include sevenPara()
+        }
+        &-button{
+            @include sevenButton();
+
+            &-shop{
+                @include sevenButtonShop();
+            }
+        }
+   }
+
+   &-eight{
+    @include elementItemsSecond();
+    
+        &-image img{
+            @include widthHeightImageOne();
+        }
+        &::after{
+            @include eightAndTenAfter();
+        }
+        &::before{
+            @include eightBefore();
+        }
+        &-logo{
+            @include eightAndTenLogo();
+        }
+        &-sale{
+            @include oneTenThreeEightNewAndSale();
+        }
+        &-price{
+            @include eightAndTenPrice();
+        }
+        &-title{
+            @include eightAndTenTitle();
+        }
+        &-made{
+            @include eightAndTenMade();
+        }
+   }
+
+   &-nine{
+    position: relative;
+	z-index: 998;	
+	display: block;	
+	width: 245px;
+	height: 410px;
+	top: 45px;
+	background-color: #ffffff;
+    overflow: hidden;
+
+        &-image img{
+            @include widthHeightImageOne();
+        }
+        &::after{
+            @include nineAfter();
+        }
+        &:hover{
+            @include nineHover();
+        }
+        &-logo{
+            @include nineLogo();
+        }
+        &-title{
+            @include nineTitle();
+        }
+        &-price{
+            @include ninePrice();
+        }
+        &-made{
+            @include nineMade();
+        }
+        &-button{
+            @include nineButton();
+            &-para{
+                @include ninePara();
+            }
+        }
+        &-icon{
+            @include nineIcon();
+        }
+
+       &-list-icon{
+           display: inline-block;
+       }
+
+   }   
+
+   &-ten{
+    @include elementItemsSecond();
+
+        &-image img{
+            @include widthHeightImageOne();
+        }
+        &::after{
+            @include eightAndTenAfter();
+        }
+        &::before{
+            @include tenBefore();
+        }
+        &-logo{
+            @include eightAndTenLogo();
+        }
+        &-new{
+            @include oneTenThreeEightNewAndSale();       
+        }
+        &-price{
+            @include eightAndTenPrice();      
+        }
+        &-title{
+            @include eightAndTenTitle();
+        }
+        &-made{
+            @include eightAndTenMade();       
+        }
+
+
+   }
+   
+   &-eleven{
+    position: relative;
+	display: block;
+	width: 410px;
+    height: 345px;
+        &-image img{
+            @include widthHeightImageThree();       
+        }
+    
+        &::after{
+            @include elevenAfter();
+        }
+        &-button{            
+            @include elevenButton();
+            &-para{
+                @include elevenButtonPara();
+            }
+        }
+
+        &-title{
+            @include elevenTitle();
+        }
+        &-para{
+            @include elevenPara();
+        }
+   }
+   
+}
+
+// FOOTER
+
+@mixin footer {
+    position: relative;
+	background-color: #86dbd5;
+    background-size: cover;
+}
+
+@mixin footerList {
+    padding: 60px 60px 0px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin footerLista {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Nunito-Light";
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    line-height: 26px;
+}
+
+@mixin footerListaMain {
+    color: #000000;
+    font-family: "Nunito-Bold";
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.4px;	
+}
+
+@mixin footerLine {
+    width: 1000px;
+    border-bottom: 1px solid black;
+    margin: auto;
+    padding-top: 20px;
+}
+
+@mixin footerContent {
+    position: relative;
+    padding: 20px 60px 0px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin footerMainContent {
+    color: #000000;
+    font-family: "Nunito-Bold";
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@mixin footerContentListname {
+    color: #000000;
+    font-family: "Nunito-Light";
+    font-size: 12px;
+    font-weight: 400;
+    width: 70%;
+    line-height: 35px;
+}
+
+@mixin footerContentIcon {
+    position: absolute;
+    right: 70px;
+    bottom: 10px;
+    line-height: 30px;
+}
+
+@mixin footerLast {
+    position: relative;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin footerLastListname {
+    color: #000000;
+    font-family: "Nunito-Light";
+    font-size: 12px;
+    font-weight: 400;
+}
+
+@mixin footerLastSocialname {
+    display: inline-block;
+    padding: 5px;
+}
+
+@mixin footerAfter {
+    content: "";
+    position: absolute;
+    z-index: 998;
+    right: 0px;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+    transform: rotate(-180deg);	
+    opacity: 0.9;
+    border-left: 667px solid #f34e49;;
+    border-top: 48px solid transparent;
+}
+
+.footer{
+    @include footer();
+
+    &__list{
+        @include footerList();
+
+        &-a{
+            @include footerLista();
+        }
+
+        &-main{
+            @include footerListaMain()
+        }
+    }
+
+    &__line{
+            @include footerLine();
+    }
+
+    &__content{
+        @include footerContent();
+
+        &-main{
+            @include footerMainContent();
+            
+        }
+        &-list-name{
+            @include footerContentListname();
+        }
+
+        &-icon{
+            @include footerContentIcon();
+
+            & img{
+                width: 113px;
+                height: 42px;	
+            }
+        }
+        
+    }
+
+    &__last{
+        @include footerLast();
+
+        &-list-name{
+            @include footerLastListname();	
+        }
+
+        &-social-name{
+            @include footerLastSocialname();
+        }
+    }
+    &::after{
+        @include footerAfter();
+    }
+}
