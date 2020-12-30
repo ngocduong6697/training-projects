@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link rel=“stylesheet” href=“https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css”>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+                       
+        <title>GIF FINDER APP</title>
+    </head>
+
+    <body>
+        <section id="search">
+            <div class="search">
+                <h2 class="search__content">Git Finder </h2>
+                <form class="search__engine" action="#">
+                    <input class="search__engine-input" id="search__engine-input"  type="text" placeholder="Search for some gits...">
+                    <button class="search__engine-button" id="search__engine-button" type="submit" ><i>GO</i></button>
+                    <div class="search__engine-loading"></div>
+                </form>
+            </div>
+        </section>   
+        <section id="library" class="JPO_open" >
+            <div class="library">                
+                <div class="library__images" id="library__images" >                    
+                    <a href="" id="library__images-img">
+                        <img class="library__images-img" src="" alt="">                      
+                    </a> 
+            </div>
+        </section>
+
+        <div class="loading" id="loading"><img src="img/loading.gif" alt=""></div>
+
+        <section id="JPO" class="JPO">
+            <div class="JPO_remove-gif" id = "JPO_remove-gif"></div>
+            <button class="JPO_close" class="fa fa-times">X</button>                                                   
+            <p class="JPO_copyURL" id= "JPO_copyURL">Get URL to Copy!</p>
+        </section>
+
+        <section id="loadmore">
+            <div class="loadmore">
+                <button class="loadmore__btn" id="loadmore__btn">load more</button>
+            </div>
+        </section>
+
+       
+                           
+        <!-- JQUERY AND FILE JS-->        
+        <!-- Include jQuery -->        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>       
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>                    
+
+        <!-- Include jQuery popup overlay -->        
+        <script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
+
+       
+        <script src="js/app.js"></script>
+
+    </body>
+</html>

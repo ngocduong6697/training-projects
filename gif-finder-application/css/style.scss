@@ -1,0 +1,204 @@
+/* RESET CSS BEGIN */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.no-outline:focus {
+	outline: none;
+}
+
+* {
+	box-sizing: border-box; 
+}
+/*RESET CSS END*/
+
+// SEARCH
+@mixin bothInputAndButtonSearch {
+	float: left;
+	border: 2px solid #ccc;		
+	font-size: 17px;
+	border-radius: 4px;
+}
+
+.search{
+    width: 1024px;
+	margin: auto;		
+	padding-bottom: 80px;
+	&__content{
+		text-align: center;
+		font-family: 'Lato';
+		font-size: 40px;
+		font-weight: 700;
+		margin: 30px 0px 10px 0px ;
+	}
+    &__engine {		
+		&-input{
+			@include bothInputAndButtonSearch();
+			width:90%;							
+			font-size: 16px;
+			padding: 12px 20px 12px 40px;
+			background-color: white;
+			background-image: url('../img/searchicon.png');
+			background-position: 10px 10px; 
+			background-repeat: no-repeat;
+		}
+		&-button{
+			@include bothInputAndButtonSearch();			
+			padding: 11px;
+			width: 10%;       
+			color: #555;        		
+			border-left: none;
+			cursor: pointer;
+			background: #03a9f4;
+		}
+		// &-loading{
+			
+		// }
+				
+    }  
+    
+}
+
+
+// LIBRARY
+
+@mixin img {
+	width: 290px;
+	height: 270px;
+}
+
+#library{
+	display: none;
+}
+.library{
+	width: 1600px;
+	margin: auto;	
+	display: flex;				
+    flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;	
+	&__images{					
+		@include img();
+		margin-bottom: 30px;
+		cursor: pointer;				
+		&-img{
+			@include img(); 		
+		}
+	}
+}
+// loading
+.loading{
+	width: 200px;
+	margin: auto;
+	display: none;
+	& img{
+		width: 200px;
+		height: 200px;
+	}
+}
+
+
+// loadmore
+#loadmore{
+	display: none;
+}
+
+.loadmore{
+	width: 1024px;
+	margin: auto;
+	display: flex;
+	justify-content: center;	
+	padding-bottom: 30px;
+	&__btn{		
+		cursor: pointer;
+		color: #555;
+		font-size: 18px;
+		font-family: 'Lato';
+		text-align: center;
+		padding: 10px;
+		width: 160px;
+		text-transform: uppercase;
+	}
+}
+
+// POPUP
+
+.JPO{
+	position: relative;
+
+	&_remove-gif{
+		position: absolute;
+		top: 40px;
+		left: 115px;
+	}
+
+	&_close{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+	}
+	&_copyURL{
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		margin-left: -95px;
+		width: 200px;
+		height: 40px;
+		background: #00d0ff70;
+		cursor: pointer;
+		border-radius: 20px;
+		padding: 10px 0px 0px 50px;
+		
+	}
+}
+
+.popup_content {
+	margin: 10px;
+	padding: 0 10px;
+	max-width: 60%;
+	width: 500px;
+	border: 2px solid #444;
+	background: white;
+	height: 400px;	
+}
